@@ -5,6 +5,11 @@ const { MONGOURL } = require('./keys')
 const app = express()
 const PORT = 5000
 
+require('./models/user')
+
+app.use(express.json())
+app.use(require('./routes/auth'))
+
 mongoose.connect(MONGOURL, {
     useNewUrlParser: true,
     useUnifiedTopology: true
