@@ -13,7 +13,7 @@ function App() {
       <BoardBar />
       <BoardContent />
     </div>
-  );
+  )
 }
 
 export default App
